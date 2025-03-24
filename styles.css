@@ -22,31 +22,36 @@ body {
   border-radius: 12px;
   color: white;
   cursor: pointer;
+  user-select: none; /* Prevent accidental text selection */
 }
 
 .date-label:hover {
   background-color: #3d7d96;
 }
 
-/* 👇 Here's the magic fix for hiding "dd . mm . yyyy" */
+/* 👇 Hide the default text completely */
 input[type="date"] {
   font-size: 18px;
   appearance: none;
   background: none;
   border: none;
-  color: transparent; /* hide default text */
+  color: transparent;
   cursor: pointer;
-  width: 24px;
+  width: 20px;
   padding: 0;
+  position: absolute;
+  opacity: 0; /* Makes it invisible but still functional */
 }
 
-input[type="date"]::-webkit-datetime-edit,
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-clear-button {
-  display: none;
+/* Ensure full button is clickable */
+.date-label {
+  position: relative;
+  padding-right: 40px; /* Extra padding for click space */
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(1);
-  cursor: pointer;
+.date-label::after {
+  content: "📅"; /* Adds a calendar icon manually */
+  position: absolute;
+  right: 12px;
+  font-size: 18px;
 }
