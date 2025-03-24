@@ -1,7 +1,7 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #1b252f;
-  color: #ffffff;
+  background-color: #ffffff; /* 👈 White background */
+  color: #1b252f;            /* 👈 Dark text now, so it’s readable */
   padding: 40px 20px;
   margin: 0;
 }
