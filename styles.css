@@ -46,12 +46,12 @@ input[type="date"] {
 /* Ensure full button is clickable */
 .date-label {
   position: relative;
-  padding-right: 40px; /* Extra padding for click space */
+  padding-right: 50px; /* Extra padding for click space */
 }
 
 .date-label::after {
   content: "📅"; /* Adds a calendar icon manually */
   position: absolute;
-  right: 12px;
-  font-size: 18px;
+  right: 14px;
+  font-size: 20px;
 }
